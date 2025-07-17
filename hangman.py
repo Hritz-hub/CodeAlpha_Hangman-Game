@@ -15,7 +15,7 @@ guessed_letters = []
 placeholder = ""
 for position in range(word_length):
     placeholder += " "
-print("🔠 Word to guess:", placeholder)
+print(" Word to guess:", placeholder)
 
 # Main game loop
 while not game_over:
@@ -27,13 +27,13 @@ while not game_over:
     guessed_letters.append(guess)
 
     if guess in chosen_word:
-        print("✅ Correct guess!")
+        print(" Correct guess!")
         correct_letters.append(guess)
     else:
         lives -= 1
-        print(f"❌ Wrong guess! Lives left: {lives}")
+        print(f" Wrong guess! Lives left: {lives}")
         if lives == 0:
-            print("\n💀 Game Over! The word was:", chosen_word)
+            print("\n Game Over! The word was:", chosen_word)
             break
 
     # Update display
@@ -48,5 +48,5 @@ while not game_over:
     print("Guessed letters so far:", ', '.join(guessed_letters))
 
     if display == chosen_word:
-        print("\n🎉 You guessed the word correctly!")
+        print("\n You guessed the word correctly!")
         game_over = True
